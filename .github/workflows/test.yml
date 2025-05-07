@@ -5,6 +5,14 @@ on:
     branches: [ "main", "yololab" ]
   pull_request:
     branches: [ "main", "yololab" ]
+  
+  # 允许手动触发
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '运行原因'
+        required: false
+        default: '手动测试'
 
 jobs:
   test:
